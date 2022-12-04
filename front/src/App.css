@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400');
-
 .App {
   text-align: center;
 }
@@ -8,9 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-/*body{*/
-/*  background:#f1f1f2;*/
-/*}*/
+*{
+  color:#99a8bd;
+}
+body{
+  background:#19222d;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -51,7 +52,41 @@
 .input:focus{
   outline:none;
 }
+.bg-black-h{
+  background:rgba(0,0,0,0.5);
+}
+.block{
+  background:#1F2937;
+  border:1px solid #99a8bd;
+}
+.bg-black-g-desc{
+  background: linear-gradient(
+          rgba(0,0,0,0.75),
+          rgba(0,0,0,0.6),
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.3),
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0)
+  );
+}
 
+.stack-img{
+  width:60px;
+  height:60px;
+}
+.ws-pw{
+  white-space:pre-line;
+}
+.bg-black-g-asc{
+  background: linear-gradient(
+          rgba(0,0,0,0),
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.3),
+          rgba(0,0,0,0.45),
+          rgba(0,0,0,0.6),
+          rgba(0,0,0,0.75)
+  );
+}
 .button{
   line-height:1;
   border:0;
@@ -67,7 +102,7 @@
 .container{max-width:1440px;margin:auto}
 
 .border{
-  border:1px solid black;
+  border:1px solid white;
 }
 .border-basic{
   border:1px solid #f1f1f2;
@@ -121,6 +156,22 @@
 .p6{padding:1.5rem}
 .p7{padding:1.75rem}
 .p8{padding:2rem}
+.px1{padding:0 0.25rem}
+.px2{padding:0 0.5rem}
+.px3{padding:0 0.75rem}
+.px4{padding:0 1rem}
+.px5{padding:0 1.25rem}
+.px6{padding:0 1.5rem}
+.px7{padding:0 1.75rem}
+.px8{padding:0 2rem}
+.py1{padding:0.25rem 0}
+.py2{padding:0.5rem 0}
+.py3{padding:0.75rem 0}
+.py4{padding:1rem 0}
+.py5{padding:1.25rem 0}
+.py6{padding:1.5rem 0}
+.py7{padding:1.75rem 0}
+.py8{padding:2rem 0}
 .mauto{margin:auto}
 .m1{margin:0.25rem}
 .m2{margin:0.5rem}
@@ -138,11 +189,22 @@
 .br6{border-radius:1.5rem}
 .br7{border-radius:1.75rem}
 .br8{border-radius:2rem}
+.f-size-h{font-size:1.125rem}
+.f-size1{font-size:0.25rem}
+.f-size2{font-size:0.5rem}
+.f-size3{font-size:0.75rem}
+.f-size4{font-size:1rem}
+.f-size5{font-size:1.25rem}
+.f-size6{font-size:1.5rem}
+.f-size7{font-size:1.75rem}
+.f-size8{font-size:2rem}
 .top0{top:0}
 .top10{top:10%}
+.top48-5{top:48.5%}
 .bottom0{bottom:0}
 .bottom10{bottom:10%}
 .left50{left:50%}
+.right0{right:0}
 .slate-middle{transform: translate(-50%,-50%)}
 .w100{width:100%}
 .w90{width:90%}
@@ -156,6 +218,8 @@
 .w10{width:10%}
 .h100{height:100%}
 .h50{height:50%}
+.h45{height:45%}
+.h40{height:40%}
 .text-start{text-align:start;}
 .text-center{text-align:center;}
 .text-end{text-align:end;}
@@ -204,42 +268,8 @@
   transition:all 0.5s;
   height:100%;
 }
-.HomeUserMenu{
-  display: grid;
-  grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
-  min-height:30vh;
-}
-.UserMenu{
-  height:100%;
-  min-height:100px;
-  position: relative;
-  border-radius:1rem;
-  color:white;
-}
-.UserMenu:hover{
-  cursor: pointer;
-}
-.UserMenuColor_1{
-  background:#02F7CA;
-}
-.UserMenuColor_2{
-  background:#3B9A49;
-}
-.UserMenuColor_3{
-  background:#9AED09;
-}
-.UserMenuColor_4{
-  background:#D6BB02;
-}
-.UserMenuColor_5{
-  background:#FA9F02;
-}
-.UserMenu span{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-}
+
+
 .category-list {
   -moz-transition: height .5s;
   -ms-transition: height .5s;
@@ -255,6 +285,9 @@
 }
 .flex{
   display: flex;
+}
+.flex-wrap{
+  flex-wrap: wrap;
 }
 .justify-content-center{
   justify-content: center;
@@ -301,13 +334,14 @@
 .rotate-set{
   position:absolute;
   transform-origin: left;
-  width:200px;
-  text-align:end;
+  width:16vw;
+  text-align:center;
   transition: all 0.5s;
+  font-size: 1.5rem;
 }
 .rotate-div{
-  left:50%;
-  top:45%;
+  left:10%;
+  top:46%;
   transform:translate(-50%,-50%);
 }
 .rotate-option{
@@ -316,6 +350,9 @@
   top:50%;
   transform:translate(-50%,-50%);
   text-align:end;
+}
+.opacity{
+  opacity:1;
 }
 .relative{
   position:relative;
@@ -327,5 +364,8 @@
   position:fixed;
 }
 .min-height500{
-  min-height:500px;
+  min-height:450px;
+}
+.zIndex30{
+  z-index:30;
 }
